@@ -1,0 +1,105 @@
+.form-content {
+    width: 50%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    /* align-items: center; */
+    background: #fff;
+    box-shadow: 0 0 2px ;
+    gap: 1.4em;
+    border-radius: 0.4em;
+    padding: 1.5em 0;
+}
+
+@media (max-width: 479px)
+{
+    
+    .form {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        flex-direction: column;
+        width: 100%;
+        background: orangered;
+    }
+    
+    .form-content {
+        width: 90%;
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+        background: #fff;
+        box-shadow: 0 0 2px ;
+        gap: 1.9em;
+        border-radius: 0.4em;
+        padding: 3em 0;
+    }
+    
+    .form-content h3 {
+        font-size: 2em;
+        text-align: center;
+    }
+    
+    .form-content .inputs {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5em;
+        width: 90%;
+        padding: 0 0;
+        padding-left: 1em;
+    }
+    
+    .form-content .inputs input {
+        width: 95%;
+        padding: 0.5em;
+        outline: none;
+        border: 2px solid orangered;
+        border-radius: 0.5em;
+        background: transparent;
+        font-weight: 500;
+        font-size: 0.8em;
+    }
+    .form-content .bottom-items
+    {
+        display: flex;
+        justify-content: space-between;
+        font-size: 0.1em;
+    
+    }
+    .form-content .bottom-items .signup
+    {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        gap: 0.6em;
+        padding: 0 0 0 5em;
+    }
+    
+    .form-content .bottom-items .signup h6:nth-child(1)
+    {
+        font-weight: 400;
+    }
+    .form-content .bottom-items .signup h6 a
+    {
+        text-decoration: none;
+        color: orangered;
+    }
+    .form-content .bottom-items .signin
+    {
+        padding: 0 12em 0 0;
+    }
+    .form-content .bottom-items .signin button
+    {
+        width: 6em;
+        height: 2em;
+        outline: none;
+        border: none;
+        background: orangered;
+        font-weight: bold;
+        color: #fff;
+        border-radius: 0.3em;
+        cursor: pointer;
+    }
+}

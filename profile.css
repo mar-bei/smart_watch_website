@@ -1,0 +1,775 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Titan+One&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+}
+body
+{
+    background: #fff;
+}
+::-webkit-scrollbar-button{
+    width: 0;
+}
+header
+{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 0.1em 0;
+   
+}
+.top-items
+{
+    width: 100%;
+    font-size: 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000;
+    color: #fff;
+    padding: 0.9em 0;
+}
+.top-items h3
+{
+    padding-left: 1.7em;
+    cursor: pointer;
+    color: orangered;
+    font-weight: bolder;
+}
+header h3:hover,
+header .rel i:hover
+{
+    transition: .1s;
+    color: #fff;
+}
+header .rel
+{
+    display: flex;
+    align-items: center;
+    color: #ff4500;
+    gap: 1.2em;
+    padding-right: 1.5em;
+    cursor: pointer;
+}
+header .rel i
+{
+    font-size: 1em;
+}
+header .rel .bag{
+    position: relative;
+}
+header .rel .count
+{
+    position: absolute;
+    width: 0.8em;
+    height: 0.8em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: orangered;
+    /* border: 2px solid orangered; */
+    border-radius: 50%;
+    color: #000;
+    top: -0.1em;
+    right: -0.3em;
+}
+header .rel .count h5
+{
+    font-size: 0.6em;
+}
+header img{
+    width: 1.15em;
+    height: 1.15em;
+    object-fit: contain;
+    color: #000;
+    background: #000000;
+    border: 2px solid orangered;
+    
+    border-radius: 50%;
+}
+/* ============================== PROFILE CONTENT SECTION =================== */
+.profile-content
+{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+/* ========================= LEFT-SIDE SECTION=================== */
+.left_side
+{
+    background: #fff;
+    width: 20em;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 2em 0 0 0;
+    gap: 0.3em;
+    box-shadow: 0 0 2px #000;
+    border-bottom-left-radius: 0.6em;
+    z-index: 9999;
+}
+
+.left_side h3{
+    font-size: 1em;
+}
+.left_side .special_left_side_content
+{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+    margin-top: 2.5em;
+}
+
+.left_side .special_left_side
+{
+    text-align: left;
+    background: #fff;
+    border-bottom: 3px solid orangered;
+    border-left: 3px solid orangered;
+    padding: 0.3em 0;
+    padding-left: 0.6em;
+    cursor: pointer;
+    
+}
+
+.left_side_mode
+{
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+}
+.left_side_mode i
+{
+    font-size: 1.1em;
+    font-weight: bolder;
+}
+.left_side_logout, 
+.left_side_fav, 
+.left_side_edit,
+.left_side_remove
+{
+    display: flex;
+    align-items: center;
+    gap: 0.6em;
+}
+.left_side_logout i, 
+.left_side_fav i,
+.left_side_edit i,
+.left_side_remove i
+{
+    font-weight: bolder;
+    font-size: 1.05em;
+}
+.left_side img
+{
+    border-radius: 50%;
+    object-fit: cover;
+    width: 4em;
+    height: 4em;
+    border: 2.5px solid orangered;
+}
+.left_side_button
+{
+    outline: none;
+    border: none;
+    height: 2.5em;
+    background: orangered;
+    color: white;
+    font-weight: bolder;
+    border-radius: 0.5em;
+    margin-top: 3em;
+    cursor: pointer;
+}
+.left_side_closeBtn
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: orangered;
+    width: 2em;
+    height: 2em;  
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    border-bottom-left-radius: 0.5em;
+    font-weight: bolder;
+    cursor: pointer;
+}
+/* ====================================== PROFILE INFORMATIONS ===================================== */
+.profile_informations
+{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    padding-top: 1em;
+
+}
+.profile-informations-content
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3em;
+    background: #fff;
+    width: 80%;
+    /* box-shadow: 0 0 7px orangered; */
+    padding: 1em 0;
+    padding-left: 3em;
+}
+.profile-informations-content label
+{
+    font-size: 0.6em;
+    letter-spacing: 0.15em;
+    font-weight: bold;
+    color: orangered;
+}
+.profile-informations-content input
+{
+   width: 20em;
+   height: 1.5em;
+   padding: 0.4em 0;
+   padding-left: 0.9em;
+   outline: none;
+   font-weight: 500;
+   letter-spacing: 0.3em;
+   font-size: 0.7em;
+   border: 2px solid #000;
+}
+.profile-graph
+{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 1em;
+}
+.profile-graph-content
+{
+    position: relative;
+    width: 83%;
+    height: fit-content;
+    background: #fff;
+    border: 3px solid black;
+    border-top: none;
+    border-right: none;
+    margin-left: 3em;
+    margin-top: 5em;
+    /* padding-left: 1em; */
+}
+.profile-graph-content h2
+{
+    font-size: 1em;
+    margin-top: -3em;
+    text-align: center;
+}
+.profile-graph-content ul{
+    list-style: none;
+}
+.profile-graph-content div
+{
+    font-weight: 500;
+}
+.profile-graph-content .percentage-visit
+{
+    position: relative;
+    left: 0;
+    width: 100%;
+    height: fit-content;
+    background: #fff;
+}
+.profile-graph-content .percentage-visit li
+{
+    position: relative;
+    width: 100%;
+    top: 1em;
+    left:0;
+    height: 2.3em;
+    border-bottom: 1.5px solid #000;
+}
+.profile-graph-content .percentage-visit li::before
+{
+    content: '';
+    position: absolute;
+    top: -8px;
+    left: -20px;
+    height: 100%;
+    border-bottom: var(--before-border, 1px solid #000);  
+    transform: skewY(45deg);
+    width: 20px;
+}
+.profile-graph-content .percentage-visit li div{
+    position: absolute;
+    left: -4em;
+    font-size: 0.7em;
+}
+.profile-graph-content .percentage-days ul{
+    display: flex;
+    gap: 5em;
+}
+.profile-graph-content .percentage-days ul li
+{
+    position: relative;
+    bottom: -1.5em;
+}
+.profile-graph-content .percentage-days ul li div
+{
+    font-size: 0.7em;
+    padding-left: 2em;
+}
+.one
+{
+    width: 40px;
+    height: 32%;
+    background: orangered;
+    position: absolute;
+    left: -3%;
+    bottom: 20px;
+    z-index: 19999;
+    margin: 0 40px;
+}
+.two
+{
+    width: 40px;
+    height: 50%;
+    background: orangered;
+    position: absolute;
+    left: 18.5%;
+    bottom: 20px;
+    z-index: 19999;
+    margin: 0 40px;
+}
+.three
+{
+    width: 40px;
+    height: 75%;
+    background: orangered;
+    position: absolute;
+    left: 41%;
+    bottom: 20px;
+    z-index: 19999;
+    margin: 0 40px;
+}
+.four
+{
+    width: 40px;
+    height: 35%;
+    background: orangered;
+    position: absolute;
+    left: 63.5%;
+    bottom: 20px;
+    z-index: 19999;
+    margin: 0 40px;
+}
+.five{
+    width: 40px;
+    height: 18%;
+    background: orangered;
+    position: absolute;
+    left: 85.6%;
+    bottom: 20px;
+    z-index: 19999;
+    margin: 0 40px;
+}
+.bar
+{
+    bottom: 0px;
+}
+
+/* ================================== CONFIRMATION SECTION ============================ */
+
+.confirmation{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.confirmation-content
+{
+    position: absolute;
+    top: 0;
+    width: 50%;
+    height: fit-content;
+    background: #fff;
+    border: 3px solid orangered;
+    display: none;
+    flex-direction: column;
+    gap: 4em;
+    padding: 1em;
+    z-index: 99999;
+}
+.confirmation-content .buttons
+{
+    display: flex;
+    justify-content: right;
+    gap: 0.7em;
+}
+.confirmation-content button
+{
+    width: 5em;
+    background: transparent;
+    outline: none;
+    border: 2px solid orangered;
+    cursor: pointer;
+}
+.confirmation-content button:hover{
+    background: orangered;
+    color: #fff;
+}
+
+@media (max-width: 470px) {
+    /* ============================== PROFILE CONTENT SECTION =================== */
+.profile-content
+{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+/* ========================= LEFT-SIDE SECTION=================== */
+.left_side
+{
+    background: #fff;
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 2em 0 0 0;
+    gap: 0.3em;
+    box-shadow: 0 0 2px #000;
+    border-bottom-left-radius: 0.6em;
+    z-index: 9999;
+}
+
+.left_side h3{
+    font-size: 1em;
+}
+.left_side .special_left_side_content
+{
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    margin-top: 2.5em;
+}
+
+.left_side .special_left_side
+{
+    text-align: left;
+    background: #fff;
+    border-bottom: 3px solid orangered;
+    border-left: 3px solid orangered;
+    padding: 0.3em 0;
+    padding-left: 0.6em;
+    cursor: pointer;
+    
+}
+
+
+.left_side_mode
+{
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+}
+.left_side_mode i
+{
+    font-size: 1.1em;
+    font-weight: bolder;
+}
+.left_side_logout, 
+.left_side_fav, 
+.left_side_edit,
+.left_side_remove
+{
+    display: flex;
+    align-items: center;
+    gap: 0.6em;
+}
+.left_side_logout i, 
+.left_side_fav i,
+.left_side_edit i,
+.left_side_remove i
+{
+    font-weight: bolder;
+    font-size: 1.05em;
+}
+.left_side img
+{
+    border-radius: 50%;
+    object-fit: cover;
+    width: 4em;
+    height: 4em;
+}
+.left_side_button
+{
+    outline: none;
+    border: none;
+    height: 2.5em;
+    background: orangered;
+    color: white;
+    font-weight: bolder;
+    border-radius: 0.5em;
+    margin-top: 3em;
+    cursor: pointer;
+}
+.left_side_closeBtn
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: orangered;
+    width: 2em;
+    height: 2em;  
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    border-bottom-left-radius: 0.5em;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+
+/* ====================================== PROFILE INFORMATIONS ===================================== */
+.profile_informations
+{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 4em;
+
+}
+.profile-informations-content
+{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.8em;
+    background: #fff;
+    width: 90%;
+    padding: 1em 0;
+    padding-left: 0;
+}
+.profile-informations-content label
+{
+    font-size: 0.8em;
+    letter-spacing: 0.15em;
+    font-weight: bold;
+    color: orangered;
+}
+.profile-informations-content input
+{
+   width: 100%;
+   height: 1.7em;
+   padding: 0.4em 0;
+   padding-left: 0.9em;
+   outline: none;
+   font-weight: 400;
+   letter-spacing: 0.3em;
+   font-size: 0.8em;
+   border: 2px solid #000;
+}
+
+.profile-graph
+{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 1em;
+}
+.profile-graph-content
+{
+    position: relative;
+    width: 83%;
+    height: fit-content;
+    background: #fff;
+    border: 3px solid black;
+    border-top: none;
+    border-right: none;
+    margin-left: 3em;
+    margin-top: 5em;
+    font-size: 2.5vw;
+    /* padding-left: 1em; */
+}
+.profile-graph-content h2
+{
+    font-size: 1em;
+    margin-top: -3em;
+    text-align: center;
+}
+.profile-graph-content ul{
+    list-style: none;
+}
+.profile-graph-content div
+{
+    font-weight: 500;
+}
+.profile-graph-content .percentage-visit
+{
+    position: relative;
+    left: 0;
+    width: 100%;
+    height: fit-content;
+    background: #fff;
+}
+.profile-graph-content .percentage-visit li
+{
+    position: relative;
+    width: 100%;
+    top: -0.05em;
+    left:0;
+    height: 2.3em;
+    border-bottom: 1.5px solid #000;
+}
+.profile-graph-content .percentage-visit li::before
+{
+    content: '';
+    position: absolute;
+    top: -8px;
+    left: -20px;
+    height: 100%;
+    border-bottom: var(--before-border, 1px solid #000);  
+    transform: skewY(45deg);
+    width: 20px;
+}
+.profile-graph-content .percentage-visit li div{
+    position: absolute;
+    left: -5em;
+    top: -1em;
+    font-size: 0.7em;
+}
+.profile-graph-content .percentage-days
+{
+    position: relative;
+    left: 0;
+    width: 100%;
+}
+.profile-graph-content .percentage-days ul
+{
+    display: flex;
+    gap: 1em;
+}
+.profile-graph-content .percentage-days li
+{
+    position: relative;
+    width: 100%;
+    top: -0.05em;
+    left: 0;
+    border-bottom: 1.5px solid #000;
+    font-size: 3.4vw;
+}
+
+.profile-graph-content .percentage-days li div{
+    position: absolute;
+    left: -.5em;
+    top: 0.5em;
+}
+.one
+{
+    width: 40px;
+    height: 32%;
+    background: orangered;
+    position: absolute;
+    left: -6%;
+    bottom: 20px;
+    z-index: 19999;
+    margin: 0 40px;
+}
+.two
+{
+    width: 40px;
+    height: 50%;
+    background: orangered;
+    position: absolute;
+    left: 16%;
+    bottom: 20px;
+    z-index: 19999;
+    margin: 0 40px;
+}
+.three
+{
+    width: 40px;
+    height: 75%;
+    background: orangered;
+    position: absolute;
+    left: 37%;
+    bottom: 20px;
+    z-index: 19999;
+    margin: 0 40px;
+}
+.four
+{
+    width: 40px;
+    height: 35%;
+    background: orangered;
+    position: absolute;
+    left: 57%;
+    bottom: 20px;
+    z-index: 19999;
+    margin: 0 40px;
+}
+.five{
+    width: 40px;
+    height: 18%;
+    background: orangered;
+    position: absolute;
+    left: 76.8%;
+    bottom: 20px;
+    z-index: 19999;
+    margin: 0 40px;
+}
+.bar
+{
+    width: 15px;
+    bottom: 0px;
+}
+
+/* ================================== CONFIRMATION SECTION ============================ */
+
+.confirmation{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.confirmation-content
+{
+    position: absolute;
+    top: 0;
+    width: 50%;
+    height: fit-content;
+    background: #fff;
+    border: 3px solid orangered;
+    display: none;
+    flex-direction: column;
+    gap: 4em;
+    padding: 1em;
+    z-index: 99999;
+}
+.confirmation-content .buttons
+{
+    display: flex;
+    justify-content: right;
+    gap: 0.7em;
+}
+.confirmation-content button
+{
+    width: 5em;
+    background: transparent;
+    outline: none;
+    border: 2px solid orangered;
+    cursor: pointer;
+}
+.confirmation-content button:hover{
+    background: orangered;
+    color: #fff;
+}
+}

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>WATCH STRORE</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css" referrerpolicy="no-referrer" />
+</head>
+<body>
+<!-- =========================HEADER SECTION=================== -->
+    <header>
+        <h3 onclick="toHomePage()">WATCH STORE</h3>
+        <div class="rel">
+            <!-- <i class="ri-moon-clear-line"></i> -->
+            <div class="bag">
+                 <i class="ri-shopping-cart-line"></i>
+                 <div class="sidebar-count count">
+                    <h5>0</h5>
+                 </div>
+            </div>
+            <img src="img/user.png" class="profile_img" id="profile_img" alt="">
+
+            <!-- <i class="ri-heart-line"></i> -->
+            <!-- <i class="ri-user-line"></i>  -->
+        </div>
+    </header>
+<!-- =========================PRODUCTS SECTION=================== -->
+    <section class="products">
+        <div class="products-boxes" ></div>
+    </section>
+<!-- =========================SIDEBAR SECTION=================== -->
+<section class="sidebar">
+    <header>
+        <h3 onclick="toHomePage()" class="logo">WATCH STORE</h3> 
+        <div class="rel">
+            <div class="bag">
+                <i class="ri-shopping-cart-line"></i>
+                <div class="count sidebar-count">
+                    <h5 id="product-items-length">0</h5>
+                </div>
+            </div>
+            <img src="img/user.png" class="profile_img" id="profile_img" alt="profile-img">
+        </div>
+    </header>
+    <div class="bottom-content"></div>
+    <div class="bottom-items">
+        <div class="bottom-items-content">
+            <button class="total">TOTAL: $ <span></span></button>
+            <button onclick="toCheckoutPage()" class="active">CHECKOUT</button>
+        </div>
+    </div>
+</section>
+
+<!-- =========================PROFILE NAVBAR SECTION=================== -->
+    <section class="profile_nav">
+        <div class="profile_nav_closeBtn">
+            <i class="ri-close-fill"></i>
+        </div>
+        <div class="profile_nav_image">
+            <img src="img/user.png" class="profile_img" alt="profile-img">
+        </div>
+        <div class="profile_nav_name">
+            <h3 class="text"></h3>
+        </div>
+        <div class="special_profile_nav_content">
+            <div onclick="toFavPage()" class="profile_nav_fav special_profile_nav">
+                <h3>YOUR FAVORITES</h3>
+            </div>
+            <div onclick="toCart()" class="profile_nav_edit special_profile_nav">
+                <h3>YOUR CART</h3>
+            </div>
+            <div onclick="darkMode()" class="profile_nav_mode profile_nav_darkMode special_profile_nav">
+                <i class="ri-moon-clear-line moon"></i>
+                <h3>DARK MODE</h3>
+            </div>
+            <div onclick="lightMode()" class="profile_nav_mode profile_nav_lightMode special_profile_nav" style="display: none;">
+                <i class="ri-sun-fill sun"></i>
+                <h3>LIGHT MODE</h3>
+            </div>
+            <div class="profile_nav_logout special_profile_nav" onclick="toLogout()">
+                <h3>LOG OUT</h3>
+                <i class="ri-logout-circle-r-line"></i>
+            </div>
+        </div>
+        <button class="profile_nav_button" onclick="toProfile()">SHOW PROFILE</button>
+        
+    </section>
+    <script src="products.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>

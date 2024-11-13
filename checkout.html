@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>WATCH STORE</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="checkout.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css" referrerpolicy="no-referrer" />
+</head>
+<style>
+    .card-input-container {
+    margin: 20px;
+}
+
+input {
+    font-size: 16px;
+    padding: 8px;
+    width: 300px;
+}
+
+</style>
+<body>
+    <!-- =========================HEADER SECTION=================== -->
+    <header>
+        <h3 onclick="toHomePage()">WATCH STORE</h3>
+        <div class="rel">
+            <!-- <i class="ri-moon-clear-line"></i> -->
+            <div class="bag">
+                 <i class="ri-shopping-cart-line"></i>
+                 <div class="count">
+                    <h5>0</h5>
+                 </div>
+            </div>
+            <img src="img/user.png" class="profile_img" alt="">
+
+            <!-- <i class="ri-heart-line"></i> -->
+            <!-- <i class="ri-user-line"></i>  -->
+        </div>
+    </header>
+<!-- =========================SIDEBAR SECTION=================== -->
+<section class="sidebar">
+    <header>
+        <h3 onclick="toHomePage()" class="logo">WATCH STORE</h3> 
+        <div class="rel">
+            <div class="bag">
+                <i class="ri-shopping-cart-line"></i>
+                <div class="count sidebar-count">
+                    <h5 id="product-items-length">0</h5>
+                </div>
+            </div>
+            <img src="img/user.png" class="profile_img" id="profile_img" alt="profile-img">
+        </div>
+    </header>
+    <div class="bottom-content"></div>
+    <div class="bottom-items">
+        <div class="bottom-items-content">
+            <button class="total">TOTAL: $ <span></span></button>
+            <button onclick="toCheckoutPage()" class="active">CHECKOUT</button>
+        </div>
+    </div>
+</section>
+
+<!-- =========================PROFILE NAVBAR SECTION=================== -->
+    <section class="profile_nav">
+        <div class="profile_nav_closeBtn">
+            <i class="ri-close-fill"></i>
+        </div>
+        <div class="profile_nav_image">
+            <img src="img/user.png" class="profile_img" alt="profile-img">
+        </div>
+        <div class="profile_nav_name">
+            <h3 class="text">USER</h3>
+        </div>
+        <div class="special_profile_nav_content">
+            <div onclick="toFavPage()" class="profile_nav_fav special_profile_nav">
+                <h3>YOUR FAVORITES</h3>
+            </div>
+            <div onclick="toCart()" class="profile_nav_edit special_profile_nav">
+                <h3>YOUR CART</h3>
+            </div>
+            <div onclick="darkMode()" class="profile_nav_mode profile_nav_darkMode special_profile_nav">
+                <i class="ri-moon-clear-line moon"></i>
+                <h3>DARK MODE</h3>
+            </div>
+            <div onclick="lightMode()" class="profile_nav_mode profile_nav_lightMode special_profile_nav" style="display: none;">
+                <i class="ri-sun-fill sun"></i>
+                <h3>LIGHT MODE</h3>
+            </div>
+            <div class="profile_nav_logout special_profile_nav" onclick="toLogout()">
+                <h3>LOG OUT</h3>
+                <i class="ri-logout-circle-r-line"></i>
+            </div>
+        </div>
+        <button class="profile_nav_button" onclick="toProfile()">SHOW PROFILE</button>
+        
+    </section>
+
+<!-- ============================== CHECKOUT PAGE CONTENT ================================== -->
+ <section class="checkout">
+    <div class="checkout-content">
+        <div class="checkout-content-right">
+            <div class="carpoolvenom-items">
+                <i class="ri-arrow-left-line"></i>
+                <i class="ri-store-2-line"></i>
+                <p>CarpoolVenom LLC</p>
+                <span>TEST MODE</span>
+            </div>
+            <div class="totalprice-items">
+                <p>Pay CarpoolVenom LLC</p>
+                <h1>$<span></span></h1>
+            </div>
+            <div class="products-box">
+                
+            </div>
+            
+        </div>
+        <div class="checkout-content-left">
+            <p class="card-title">Pay with card</p>
+            <div class="email">
+                <label>Email</label>
+                <input type="email" id="email" placeholder="Enter email">
+            </div>
+            <div class="cart-informations">
+                <div class="label-cards-img">
+                    <label>Card information</label>
+                    <img src="img/toppng.com-visa-mastercard-discover-png-visa-mastercard-american-express-discover-1105x175.png" alt="card-img">
+                </div>
+                <div class="cart-number">
+                    <input type="text" class="cart-num" id="cart-number-input" placeholder="1234-1234-1234-1234">
+                    <img src="img/Mastercard-Logo-PNG-HD.png" class="mastercard" alt="mastercard">
+                    <i class="ri-visa-line visa"></i>
+                    <img src="img/american-express_196539.png" class="amex" alt="amex">
+
+                </div>
+                <div class="card-date-cvc">
+                    <input type="text" id="card-date" placeholder="mm/yyyy">
+                    <input type="text" id="ccv" placeholder="CCV">
+                </div>
+            </div>
+            <div class="card-name">
+                <label>Name on card</label>
+                <input type="text" id="card-name-input" placeholder="Enter name">
+            </div>
+            <div class="billing-address">
+                <label>Billing address</label>
+                <input type="text" id="country" placeholder="Enter country">
+                <input type="text" id="address-1" class="address1" placeholder="Address 1">
+                <input type="text" id="address-2" class="address2" placeholder="Address 2">
+                <div class="city-zip-code">
+                    <input type="text" id="city" placeholder="City">
+                    <input type="text" id="zip-code" placeholder="Postal Code">
+                </div>
+            </div>
+            <div class="security">
+                <input type="checkbox" id="security-input" name="security-information">
+                <div class="security-text">
+                    <h4>Security save my information for 1-click checkout</h4>
+                    <p>Pay on CarpoolVenom LLC and everywhere Link is accepted</p>
+                </div>
+            </div>
+            <div class="pay-button">
+                <button>Pay</button>
+            </div>
+        </div>
+
+        
+    </div>
+ </section>
+ <script src="products.js"></script>
+ <script src="https://cdn.jsdelivr.net/npm/cleave.js@1.6.0/dist/cleave.min.js"></script>
+ <script src="checkout.js"></script>
+</body>
+</html>
